@@ -7,15 +7,15 @@ import Turn from "./components/Turn";
 import Continue from "./components/Continue";
 import Footer from "./components/Footer";
 
-function AuthorQuiz({ turnData }) {
-  return (
-    <div className="container-fluid">
-      <Hero />
-      <Turn {...turnData} />
-      <Continue />
-      <Footer />
-    </div>
-  );
+function AuthorQuiz({ turnData, highlight, onAnswerSelected }) {
+	return (
+		<div className="container-fluid">
+			<Hero />
+			<Turn {...turnData} highlight={highlight} onAnswerSelected={onAnswerSelected} />
+			<Continue />
+			<Footer />
+		</div>
+	);
 }
 
 export default AuthorQuiz;
