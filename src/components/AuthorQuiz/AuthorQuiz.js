@@ -1,11 +1,11 @@
 import React from "react";
 import "./AuthorQuiz.css";
-import "./bootstrap.min.css";
+import "../../bootstrap.min.css";
 
-import Hero from "./components/Hero";
-import Turn from "./components/Turn";
-import Continue from "./components/Continue";
-import Footer from "./components/Footer";
+import Hero from "../Hero";
+import Turn from "../Turn";
+import Continue from "../Continue";
+import Footer from "../Footer";
 
 function AuthorQuiz({ turnData, highlight, onAnswerSelected }) {
 	return (

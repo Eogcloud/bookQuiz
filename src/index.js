@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import AuthorQuiz from "./AuthorQuiz";
-import * as serviceWorker from "./serviceWorker";
+import AuthorQuiz from "./components/AuthorQuiz/AuthorQuiz";
 import { shuffle, sample } from 'underscore';
 
 const authors = [
@@ -80,8 +79,3 @@ function render() {
 }
 
 render();
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
