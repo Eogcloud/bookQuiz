@@ -61,7 +61,27 @@ describe("Author Quiz", () => {
 			expect(wrapper.find("div.row.turn").props().style.backgroundColor).toBe('#c95d5d');
 		})
 	})
+
+	describe("When the first answer is selected", () => {
+		let wrapper;
+		const handleAnswerSelected = jest.fn();
+
+		beforeAll(() => {
+			wrapper = mount(
+				<AuthorQuiz {...(Object.assign({}, state, { highlight: 'wrong' }))} onAnswerSelected={handleAnswerSelected} />)
+			wrapper.find('.answer').first().simulate('click');
+		});
+
+		it("onAnswerSelected should be called", () => {
+			expect(handleAnswerSelected).toHaveBeenCalled();
+		});
+
+		it("Should recieve Ulysses answer", () => {
+			expect(handleAnswerSelected).toHaveBeenCalledWith("Ulysses");
+		});
+	})
 })
+
 
 
 
